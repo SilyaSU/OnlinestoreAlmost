@@ -1,0 +1,30 @@
+﻿<Window x:Class="OnlineStore.AddItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить новый предмет" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Название" />
+            <TextBox Text="{Binding NewItemTitle, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Производитель" />
+            <TextBox Text="{Binding NewItemCompany, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Цена" />
+            <TextBox Text="{Binding NewItemPrice, UpdateSourceTrigger=PropertyChanged}" />
+
+
+            <TextBlock Text="Количество" />
+            <TextBox Text="{Binding NewItemQuantity, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Описание" />
+            <TextBox Text="{Binding NewItemDescription, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Рейтинг" />
+            <TextBox Text="{Binding NewItemScore, UpdateSourceTrigger=PropertyChanged}" />
+
+            <Button Content="Добавить" Command="{Binding AddNewItemCommand}"  CommandParameter="{Binding}" Margin="0,10,0,0" />
+
+        </StackPanel>
+    </Grid>
+</Window>
